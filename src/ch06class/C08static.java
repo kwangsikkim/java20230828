@@ -11,11 +11,12 @@ public class C08static {
 
     }
 }
-class MyClass08{
+
+class MyClass08 {
     static String name;
 
 
-    static void printName(){
-        System.out.println("name = "+name);
+    static void printName() {
+        System.out.println("name = " + name);
     }
 }
