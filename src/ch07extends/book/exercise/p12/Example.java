@@ -9,6 +9,8 @@ public class Example {
     }
 
     public static void main(String[] args) {
+        System.out.println("------");
+
         action(new A());
         action(new B());
         action(new C());
