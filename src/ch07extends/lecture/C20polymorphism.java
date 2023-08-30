@@ -4,11 +4,13 @@ public class C20polymorphism {
     public static void main(String[] args) {
 
         Item item = getItem();
-
         item.printDesc();
 
         Item item1 = getItem();
         item1.printDesc();
+
+        Item item2 = getItem();
+        item2.printDesc();
 
         System.out.println("게임 종료..");
     }
