@@ -1,4 +1,4 @@
-package ch08interface.book.sec2;
+package ch08interface.book.sec02;
 
 public interface RemoteControl {
     public void turnOn();
