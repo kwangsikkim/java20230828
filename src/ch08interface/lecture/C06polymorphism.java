@@ -8,6 +8,8 @@ public class C06polymorphism {
 
         hero.setWeapon(new Bow());
         hero.attack();
+
+        System.out.println("게임 종료..");
     }
 }
 class Hero{
