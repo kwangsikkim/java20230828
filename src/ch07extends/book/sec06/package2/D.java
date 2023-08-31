@@ -20,7 +20,7 @@ public class D extends A {          // A와 다른 패키지, 상속
 
     // 메소드 선언
     public void method2(){
-//        A a = "value"; = new A(); // 불가능
+//        A a = new A(); // 불가능
 //        a.field = "value";        // 불가능
 //        a.method();               // 불가능
                 //  직접 메소드 생성해서 사용하는 것은 불가능
