@@ -1,4 +1,4 @@
-package ch08interface.book.sec10;
+package ch08interface.book.sec10.exam01;
 
 public class PromotionExample {
     public static void main(String[] args) {
