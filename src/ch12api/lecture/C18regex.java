@@ -57,10 +57,10 @@ public class C18regex {
         System.out.println("dog".matches("do?g"));   // true
         System.out.println("doog".matches("do?g"));   // flase
 
-        System.out.println();
+        System.out.println("0번 이상");
 
         // 수량 * : 0번 이상
-        System.out.println("dog".matches("do*g"));
+        System.out.println("dg".matches("do*g"));
         System.out.println("doog".matches("do*g"));
         System.out.println("doooog".matches("do*g"));
         System.out.println("doooooooog".matches("do*g"));   // 모두 true
