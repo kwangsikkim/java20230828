@@ -3,7 +3,9 @@ package ch15collection.book.sec04.exam01;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.function.BiConsumer;
 
 public class HashMapExample {
     public static void main(String[] args) {
@@ -35,6 +37,42 @@ public class HashMapExample {
         }
         System.out.println();
 
+        //엔트리 Set 컬렉션을 얻고, 반복해서 키와 값을 얻기
+        Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
+        Iterator<Entry<String, Integer>> entryIterator = entrySet.iterator();
+        while (entryIterator.hasNext()) {
+            Entry<String, Integer> entry = entryIterator.next();
+            String k = entry.getKey();
+            Integer v = entry.getValue();
+            System.out.println(k + ": " + v);
+        }
+        System.out.println();
 
+
+
+        //향상된 for문
+        System.out.println("향상된 for문");
+        for(Map.Entry<String, Integer> entry : entrySet) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+        System.out.println();
+
+        //forEach문
+        System.out.println("forEach문");
+        map.forEach(new BiConsumer<String, Integer>() {
+            @Override
+            public void accept(String key, Integer value) {
+                System.out.println(key + ": " + value);
+            }
+        });
+        System.out.println("람다식");
+        map.forEach((key1, value1) -> System.out.println(key1 + ": " + value1));
+
+
+        System.out.println();
+        //키로 엔트리 삭제
+        map.remove("홍길동");
+        System.out.println("총 Entry 수= " + map.size());
+        System.out.println();
     }
 }

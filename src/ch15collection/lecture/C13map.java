@@ -3,6 +3,7 @@ package ch15collection.lecture;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.BiConsumer;
 
 public class C13map {
     public static void main(String[] args) {
@@ -13,16 +14,43 @@ public class C13map {
         map.put("학생3", "민재");
 
         // 향상된 for
+        System.out.println("향상된 for문 사용해서 전체 탐색");
         Set<Map.Entry<String, String>> entries = map.entrySet();
         for (Map.Entry<String, String> entry : entries) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
         // keySet
+        System.out.println("keySet 사용해서 전체 탐색");
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            System.out.println(key + ":" + map.get(key));
+        }
 
 
-
-    // forEach
-
+        // forEach
+        System.out.println("forEach 메소드로 전체 탐색");
+        map.forEach(new BiConsumer<String, String>() {
+            @Override
+            public void accept(String key, String value) {
+                System.out.println(key + ":" + value);
+            }
+        });
+        System.out.println("람다식");
+        map.forEach((key, value) -> System.out.println(key + ":" + value));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
