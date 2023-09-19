@@ -23,6 +23,9 @@ public class CodingTest {
     public static void main(String[] args) {
         String[] babbling = {"aya", "yee", "u", "maa", "wyeoo"};
         System.out.println(solution(babbling));
+
+        
+
     }
 }
 
